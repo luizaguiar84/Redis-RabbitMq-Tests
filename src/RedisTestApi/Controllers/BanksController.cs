@@ -7,19 +7,19 @@ namespace RedisTestApi.Controllers
     [ApiController]
     public class BanksController : ControllerBase
     {
-        private readonly IBankRepository bankRepository;
+        private readonly IBankRepository _bankRepository;
 
 
         public BanksController(
             IBankRepository bankRepository)
         {
-            this.bankRepository = bankRepository;
+            this._bankRepository = bankRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var banks = await bankRepository.GetBanks();
+            var banks = await _bankRepository.GetBanks();
 
             return Ok(banks);
         }

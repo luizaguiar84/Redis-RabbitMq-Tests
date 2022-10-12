@@ -6,18 +6,18 @@ namespace RedisTestApi.Repositories
 {
     public class BankRepository : IBankRepository
     {
-        private readonly IRedisRepository redisRepository;
+        private readonly IRedisRepository _redisRepository;
         private const string CountriesKey = "Banks";
 
 
         public BankRepository(IRedisRepository redisRepository)
         {
-            this.redisRepository = redisRepository;
+            this._redisRepository = redisRepository;
         }
 
         public async Task<List<Banks>> GetBanks()
         {
-            var responseData = await redisRepository.GetObjectInCache(CountriesKey);
+            var responseData = await _redisRepository.GetObjectInCache(CountriesKey);
 
             if (responseData == null)
             {
@@ -34,7 +34,7 @@ namespace RedisTestApi.Repositories
 
             var countryList = JsonConvert.DeserializeObject<List<Banks>>(responseData);
 
-            await redisRepository.SetObjectInCache(CountriesKey, responseData);
+            await _redisRepository.SetObjectInCache(CountriesKey, responseData);
 
             return countryList;
         }

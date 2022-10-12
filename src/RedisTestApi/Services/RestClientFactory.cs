@@ -2,7 +2,7 @@
 
 namespace RedisTestApi.Services
 {
-    public class RequestClientFactory
+    public static class RequestClientFactory
     {
         public static RestClient GetClient(string path)
         {

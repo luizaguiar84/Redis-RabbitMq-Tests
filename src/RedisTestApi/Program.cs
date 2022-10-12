@@ -4,11 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.InstanceName = "TestRedis";
-    options.Configuration = "localhost:6379";
+    options.InstanceName = builder.Configuration["Redis:InstanceName"];//"TestRedis";
+    options.Configuration = builder.Configuration["Redis.Configuration"]; //"localhost:6379";
 });
 
 builder.Services.AddTransient<IBankRepository, BankRepository>();

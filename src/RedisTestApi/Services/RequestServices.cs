@@ -2,7 +2,7 @@
 
 namespace RedisTestApi.Services
 {
-    public class RequestServices
+    public static class RequestServices
     {
         public static RestResponse Get(string path)
         {

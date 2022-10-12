@@ -22,8 +22,8 @@ namespace RedisTestApi.Repositories
 
             var memoryCacheOptions = new DistributedCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(60),
-                SlidingExpiration = TimeSpan.FromSeconds(60)
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(10),
+                SlidingExpiration = TimeSpan.FromSeconds(10)
             };
 
             await _distributedCache.SetStringAsync(key, data, memoryCacheOptions);
