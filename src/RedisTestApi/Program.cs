@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.InstanceName = builder.Configuration["Redis:InstanceName"];//"TestRedis";
-    options.Configuration = builder.Configuration["Redis.Configuration"]; //"localhost:6379";
+    options.Configuration = builder.Configuration["Redis:Configuration"]; //"localhost:6379";
 });
 
 builder.Services.AddTransient<IBankRepository, BankRepository>();

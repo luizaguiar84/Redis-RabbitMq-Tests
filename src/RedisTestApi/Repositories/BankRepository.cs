@@ -7,6 +7,7 @@ namespace RedisTestApi.Repositories
     public class BankRepository : IBankRepository
     {
         private readonly IRedisRepository _redisRepository;
+        private const string RestCountriesUrl = "https://brasilapi.com.br/api/banks/v1";
         private const string CountriesKey = "Banks";
 
 
@@ -21,9 +22,8 @@ namespace RedisTestApi.Repositories
 
             if (responseData == null)
             {
-                const string restCountriesUrl = "https://brasilapi.com.br/api/banks/v1";
 
-                var response = RequestServices.Get(restCountriesUrl);
+                var response = RequestServices.Get(RestCountriesUrl);
 
                 if (response.IsSuccessful)
                     responseData = response.Content;
