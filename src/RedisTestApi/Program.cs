@@ -1,3 +1,4 @@
+using RedisTestApi.Infra;
 using RedisTestApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);

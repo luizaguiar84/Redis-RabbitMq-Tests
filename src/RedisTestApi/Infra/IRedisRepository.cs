@@ -1,5 +1,5 @@
 ﻿
-namespace RedisTestApi.Repositories
+namespace RedisTestApi.Infra
 {
     public interface IRedisRepository
     {

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RedisTestApi.Entities;
+using RedisTestApi.Infra;
 using RedisTestApi.Services;
 
 namespace RedisTestApi.Repositories

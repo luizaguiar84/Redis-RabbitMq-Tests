@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 
-namespace RedisTestApi.Repositories
+namespace RedisTestApi.Infra
 {
     public class RedisRepository : IRedisRepository
     {
