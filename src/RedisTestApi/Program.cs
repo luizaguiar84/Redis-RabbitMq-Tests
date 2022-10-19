@@ -11,8 +11,8 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.Configuration = builder.Configuration["Redis:Configuration"]; //"localhost:6379";
 });
 
-builder.Services.AddTransient<IBankRepository, BankRepository>();
-builder.Services.AddTransient<IRedisRepository, RedisRepository>();
+builder.Services.AddTransient<IArticlesRepository, ArticlesMockRepository>();
+builder.Services.AddTransient<IRedisRepository, RedisMockRepository>();
 
 
 builder.Services.AddControllers();

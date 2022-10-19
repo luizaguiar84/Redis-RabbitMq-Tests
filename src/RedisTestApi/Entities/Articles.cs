@@ -1,6 +1,6 @@
 ﻿namespace RedisTestApi.Entities
 {
-    public class Banks
+    public class Articles
     {
         public string Ispb { get; set; }
         public string Name { get; set; }
