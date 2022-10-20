@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using RabbitMQ.Entities;
+using RabbitMQ.Services;
 
 namespace RabbitMQ.Controllers;
 
@@ -6,20 +8,24 @@ namespace RabbitMQ.Controllers;
 [ApiController]
 public class RabbitController : ControllerBase
 {
-    public RabbitController()
+    private readonly  IRabbitMqService _service;
+    
+    public RabbitController(IRabbitMqService service)
     {
-        
+        _service = service;
     }
     
     [HttpGet("Consume")]
     public IActionResult Get()
     {
-        return Ok();
+        var response = _service.Consume();
+        return Ok(response);
     } 
     
     [HttpPost("Publish")]
-    public IActionResult Post()
+    public IActionResult Post([FromBody] Post post)
     {
+        _service.Publish(post);
         return Ok();
     } 
 }
