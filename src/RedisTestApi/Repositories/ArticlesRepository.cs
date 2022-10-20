@@ -23,7 +23,6 @@ namespace RedisTestApi.Repositories
 
             if (responseData == null)
             {
-
                 var response = RequestServices.Get(RestArticlesUrl);
 
                 if (response.IsSuccessful)

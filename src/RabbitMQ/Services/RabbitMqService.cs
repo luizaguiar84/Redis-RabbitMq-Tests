@@ -6,12 +6,6 @@ using RabbitMQ.Entities;
 
 namespace RabbitMQ.Services;
 
-public interface IRabbitMqService
-{
-    void Publish(Post post);
-    IList<string> Consume();
-}
-
 public class RabbitMqService : IRabbitMqService
 {
     private readonly string _uri;

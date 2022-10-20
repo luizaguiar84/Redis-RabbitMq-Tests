@@ -26,6 +26,6 @@ public class RabbitController : ControllerBase
     public IActionResult Post([FromBody] Post post)
     {
         _service.Publish(post);
-        return Ok();
+        return Ok("Published");
     } 
 }

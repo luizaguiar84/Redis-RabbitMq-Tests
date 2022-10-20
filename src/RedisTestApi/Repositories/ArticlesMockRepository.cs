@@ -20,7 +20,6 @@ public class ArticlesMockRepository : IArticlesRepository
 
         if (responseData == null)
         {
-
             responseData  = JsonConvert.SerializeObject(new List<Articles>()
             {
                 new Articles()
@@ -31,7 +30,10 @@ public class ArticlesMockRepository : IArticlesRepository
                     Name = "Name"
                 }
             });
-                
+            
+            //simulate db access / get in external Api
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+            
             await _redisRepository.SetObjectInCache(ArticlesKey, responseData);
         }
 

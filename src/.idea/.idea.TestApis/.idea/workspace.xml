@@ -10,8 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="879a822b-1a24-4034-86f7-9ef25e40e84c" name="Changes" comment="set to use mock on appsettings.json">
+    <list default="true" id="879a822b-1a24-4034-86f7-9ef25e40e84c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestApis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestApis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/Repositories/ArticlesMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/Repositories/ArticlesMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/Repositories/ArticlesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/Repositories/ArticlesRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Compound.Redis+RabbitMQ">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.RabbitMQ">
     <configuration name="Redis+RabbitMQ" type="CompoundRunConfigurationType">
       <toRun name="RabbitMQ" type="LaunchSettings" />
       <toRun name="Redis" type="LaunchSettings" />
@@ -129,7 +132,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666230737219</updated>
-      <workItem from="1666230759357" duration="4121000" />
+      <workItem from="1666230759357" duration="4224000" />
+      <workItem from="1666237105362" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="Change name">
       <created>1666230776006</created>
@@ -166,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666235331172</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="project compound">
+      <created>1666235875260</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666235875260</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,37 +202,12 @@
     <MESSAGE value="commit" />
     <MESSAGE value="set uri in appsettings" />
     <MESSAGE value="set to use mock on appsettings.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="set to use mock on appsettings.json" />
+    <MESSAGE value="project compound" />
+    <option name="LAST_COMMIT_MESSAGE" value="project compound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedisTestApi/Program.cs</url>
-          <line>5</line>
-          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Program.cs" initialLine="5" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="111" />
-            </startOffsets>
-            <endOffsets>
-              <option value="163" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedisTestApi/Program.cs</url>
-          <line>13</line>
-          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Program.cs" initialLine="13" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="396" />
-            </startOffsets>
-            <endOffsets>
-              <option value="397" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/RedisTestApi/Infra/RedisRepository.cs</url>
           <line>13</line>
