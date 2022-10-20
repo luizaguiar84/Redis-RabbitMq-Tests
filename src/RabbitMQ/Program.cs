@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using RabbitMQ.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IRabbitMqService, RabbitMqService>();
+if (builder.Configuration.GetValue<bool>("UseMock"))
+    builder.Services.AddTransient<IRabbitMqService, RabbitMqServiceMock>();
+
+else
+    builder.Services.AddTransient<IRabbitMqService, RabbitMqService>();
 
 var app = builder.Build();
 

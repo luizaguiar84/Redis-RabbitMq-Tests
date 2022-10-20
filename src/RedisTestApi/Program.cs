@@ -3,17 +3,24 @@ using RedisTestApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddStackExchangeRedisCache(options =>
+if (builder.Configuration.GetValue<bool>("UseMock"))
 {
-    options.InstanceName = builder.Configuration["Redis:InstanceName"];//"TestRedis";
-    options.Configuration = builder.Configuration["Redis:Configuration"]; //"localhost:6379";
-});
+    builder.Services.AddTransient<IArticlesRepository, ArticlesMockRepository>();
+    builder.Services.AddTransient<IRedisRepository, RedisMockRepository>();
+}
+else
+{
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.InstanceName = builder.Configuration["Redis:InstanceName"];
+        options.Configuration = $"{builder.Configuration["Redis:Configuration"]}";
+        options.Configuration += $",password={builder.Configuration["Redis:Password"]}";
+    });   
 
-builder.Services.AddTransient<IArticlesRepository, ArticlesMockRepository>();
-builder.Services.AddTransient<IRedisRepository, RedisMockRepository>();
+    builder.Services.AddTransient<IArticlesRepository, ArticlesRepository>();
+    builder.Services.AddTransient<IRedisRepository, RedisRepository>();
 
+}
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

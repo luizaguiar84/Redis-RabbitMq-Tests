@@ -10,10 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="879a822b-1a24-4034-86f7-9ef25e40e84c" name="Changes" comment="">
+    <list default="true" id="879a822b-1a24-4034-86f7-9ef25e40e84c" name="Changes" comment="set uri in appsettings">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestApis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestApis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabbitMQ/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RabbitMQ/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQ/Services/RabbitMqService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RabbitMQ/Services/RabbitMqService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabbitMQ/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RabbitMQ/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisTestApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RedisTestApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4888c408211e6663764d3ea9579b1ce4f5bc77edba3c9732d5c6fa411bf4c0/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9d4f4ac7db6d2c5d183ab2d92602280ed4349fd6e6a1b6313546b3d01fdab5/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cdff73bd3c2a3d5e41f1295360b11564a226749f2651c1b4c55a3a74a66/OptionsFactory.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666230737219</updated>
-      <workItem from="1666230759357" duration="1277000" />
+      <workItem from="1666230759357" duration="3455000" />
     </task>
     <task id="LOCAL-00001" summary="Change name">
       <created>1666230776006</created>
@@ -137,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666232453803</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="set uri in appsettings">
+      <created>1666232994576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666232994576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,23 +175,63 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Change name" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="set uri in appsettings" />
+    <option name="LAST_COMMIT_MESSAGE" value="set uri in appsettings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RabbitMQ/Services/RabbitMqService.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/RabbitMQ/Services/RabbitMqService.cs" initialLine="18" containingFunctionPresentation="constructor 'RabbitMqService'">
+          <url>file://$PROJECT_DIR$/RedisTestApi/Program.cs</url>
+          <line>5</line>
+          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Program.cs" initialLine="5" containingFunctionPresentation="">
             <startOffsets>
-              <option value="393" />
+              <option value="111" />
             </startOffsets>
             <endOffsets>
-              <option value="394" />
+              <option value="163" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RedisTestApi/Program.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Program.cs" initialLine="13" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="396" />
+            </startOffsets>
+            <endOffsets>
+              <option value="397" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RedisTestApi/Infra/RedisRepository.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Infra/RedisRepository.cs" initialLine="13" containingFunctionPresentation="method 'GetObjectInCache'">
+            <startOffsets>
+              <option value="414" />
+            </startOffsets>
+            <endOffsets>
+              <option value="415" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RedisTestApi/Infra/RedisRepository.cs</url>
+          <line>20</line>
+          <properties documentPath="$PROJECT_DIR$/RedisTestApi/Infra/RedisRepository.cs" initialLine="20" containingFunctionPresentation="method 'SetObjectInCache'">
+            <startOffsets>
+              <option value="619" />
+            </startOffsets>
+            <endOffsets>
+              <option value="620" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
