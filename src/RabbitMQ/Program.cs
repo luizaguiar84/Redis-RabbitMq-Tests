@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IRabbitMqService, RabbitMqServiceMock>();
+builder.Services.AddTransient<IRabbitMqService, RabbitMqService>();
 
 var app = builder.Build();
 

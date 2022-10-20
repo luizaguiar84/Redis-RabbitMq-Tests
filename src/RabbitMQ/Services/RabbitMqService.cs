@@ -14,10 +14,17 @@ public interface IRabbitMqService
 
 public class RabbitMqService : IRabbitMqService
 {
+    private readonly string _uri;
+    public RabbitMqService(IConfiguration configuration)
+    {
+        _uri = configuration["RabbitMq:uri"];
+    }
     public void Publish(Post post)
     {
-        var factory = new ConnectionFactory();
-        factory.Uri = new Uri(@"amqp://guest:guest@localhost:5672/");
+        var factory = new ConnectionFactory
+        {
+            Uri = new Uri(_uri)
+        };
 
         var connection = factory.CreateConnection();
 
@@ -38,8 +45,10 @@ public class RabbitMqService : IRabbitMqService
     {
         var response = new List<string>();
 
-        var factory = new ConnectionFactory();
-        factory.Uri = new Uri(@"amqp://guest:guest@localhost:5672/");
+        var factory = new ConnectionFactory
+        {
+            Uri = new Uri(_uri)
+        };
 
         var connection = factory.CreateConnection();
 
