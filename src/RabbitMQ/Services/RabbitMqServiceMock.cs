@@ -5,7 +5,7 @@ namespace RabbitMQ.Services;
 
 public class RabbitMqServiceMock : IRabbitMqService
 {
-    private static List<string> listOfObjects = new List<string>();
+    private static IList<string> listOfObjects = new List<string>();
     public void Publish(Post post)
     {
         var serializedObj = JsonConvert.SerializeObject(post);
